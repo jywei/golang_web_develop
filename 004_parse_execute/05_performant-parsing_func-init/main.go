@@ -6,10 +6,10 @@ import (
 	"text/template"
 )
 
-var tpl *template.Template
+var tpl *template.Template // package level of scope
 
 func init() {
-	tpl = template.Must(template.ParseGlob("templates/*"))
+	tpl = template.Must(template.ParseGlob("templates/*")) // ParseGlob would return a template and error, and Must will do the eror checking
 }
 
 func main() {
