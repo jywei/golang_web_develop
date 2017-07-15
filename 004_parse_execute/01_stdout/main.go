@@ -1,9 +1,9 @@
 package main
 
 import (
-	"html/template"
 	"log"
 	"os"
+	"text/template"
 )
 
 func main() {
@@ -12,7 +12,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	err = tpl.Execute(os.Stdout, nil)
+	err = tpl.Execute(os.Stdout, nil) // writer and data
 	if err != nil {
 		log.Fatalln(err)
 	}
