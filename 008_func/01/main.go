@@ -29,12 +29,15 @@ type car struct {
 var fm = template.FuncMap{
 	"uc": strings.ToUpper,
 	"ft": firstThree,
-}
+} // string as a key and its name, to emptpy interface (no methods, at least no method) as a value (function)
 
 func init() {
 	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
+	// tpl = template.Must(template.parseFiles("tpl.gohtml"))
+	// tpl = tpl.Funcs(fm)  // wrong
 }
 
+// first three letter ofthe sting
 func firstThree(s string) string {
 	s = strings.TrimSpace(s)
 	if len(s) >= 3 {
