@@ -24,7 +24,7 @@ func main() {
 		// connection is a writer who implements a writer interface
 		io.WriteString(conn, "\nHello from TCP server\n")
 		fmt.Fprintln(conn, "How is your day?")
-		fmt.Fprintf(conn, "%v", "Wee, I hope!")
+		fmt.Fprintf(conn, "%v", "Wee, I hope!\n")
 
 		conn.Close()
 	}
