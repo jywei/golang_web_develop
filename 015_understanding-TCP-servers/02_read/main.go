@@ -7,6 +7,9 @@ import (
 	"net"
 )
 
+// 1. Listen
+// 2. Accept (Accept will provide a connection)
+// 3. Free to read or write
 func main() {
 	li, err := net.Listen("tcp", ":8080")
 	if err != nil {
