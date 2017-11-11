@@ -12,6 +12,7 @@ func main() {
 	scanner := bufio.NewScanner(strings.NewReader(s))
 
 	scanner.Split(bufio.ScanWords)
+	// scanner.Split(bufio.ScanRunes)
 
 	for scanner.Scan() {
 		line := scanner.Text()
