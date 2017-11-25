@@ -13,7 +13,7 @@ func (d hotdog) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 
 type hotcat int
 
-func (d hotcat) ServeHTTP(res http.ResponseWriter, req *http.Request) {
+func (c hotcat) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 	io.WriteString(res, "kitty kitty kitty")
 }
 
