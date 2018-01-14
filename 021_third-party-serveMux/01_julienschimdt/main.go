@@ -67,6 +67,7 @@ func applyProcess(w http.ResponseWriter, req *http.Request, _ httprouter.Params)
 	HandleError(w, err)
 }
 
+// HandleError is error handler
 func HandleError(w http.ResponseWriter, err error) {
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
