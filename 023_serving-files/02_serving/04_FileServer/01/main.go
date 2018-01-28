@@ -7,6 +7,8 @@ import (
 
 func main() {
 	http.Handle("/", http.FileServer(http.Dir(".")))
+	// file server serves everything in current directry
+	// including its own code, not ideal
 	http.HandleFunc("/dog", dog)
 	http.ListenAndServe(":8080", nil)
 }
