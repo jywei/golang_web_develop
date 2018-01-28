@@ -21,6 +21,7 @@ func dogPic(w http.ResponseWriter, req *http.Request) {
 	f, err := os.Open("toby.jpg") // return the pointer to the file
 	if err != nil {
 		http.Error(w, "file not found", 404)
+		// 404 == http.StatusNotFound
 		return
 	}
 	defer f.Close()
