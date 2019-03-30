@@ -30,7 +30,7 @@ Anything after the ```?``` is the query string - the area where values are store
 
 ![anatomy of a URL](URL.png)
 
-The values are stord in a ```identifier=value``` fashion.
+The values are stored in a ```identifier=value``` fashion.
 
 You can have multiple ```identifier=value``` by separating them with the ```&``` ampersand.
 
